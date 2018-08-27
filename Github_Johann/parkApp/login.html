@@ -16,16 +16,79 @@
      background: rgba(245, 245, 245, 0.8);
      box-shadow: rgba(0, 0, 0, 0.3) 10px 10px 10px;
     }
+    /* Popup container - can be anything you want */
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
   </style>
+
   <link href="css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
   <script src="js/bootstrap.min.js"></script>
   <script src="js/jquery-1.11.1.min.js"></script>
 </head>
 
 <body>
+<div>
+  <br/>
+  <br/>
+  <br/>
+</div>
+<div align="center">
   <div class="container">
-    <div class="row centered-form">
-      <div class="col-md-12 col-md-offset-2">
+    <div class="centered-form">
+      <div class="col-md-6 ">
         <div class="panel panel-default">
           <div class="panel-heading" align = "center">
             <img src="img/logo.png" alt="logo" width="78" height="114"/>
@@ -38,18 +101,29 @@
           <div class="panel-body">
             <form role="form">
               <div class="form-group">
-                <input type="text" name="user" id="user" class="form-control input-sm" placeholder="Usuario/email">
+                <input type="text" name="user" id="user" class="form-control input-sm" placeholder="Usuario/email" required="true">
               </div>
               <div class="form-group">
-                <input type="password" name="password" id="password" class="form-control input-sm" placeholder="Contrase&ntilde;a">
+                <input type="password" name="password" id="password" class="form-control input-sm" placeholder="Contrase&ntilde;a" required="true">
               </div>
+              <div class="popup" onclick="myFunction()">
               <input type="submit" value="Acceder" class="btn btn-info btn-block">
+              <span class="popuptext" id="myPopup">Usuario o contraseña incorrecta..!</span>
+              </div>
               <br>
             </form>
           </div>
         </div>
       </div>
     </div>
+</div>
   </div>
+  <script>
+// When the user clicks on div, open the popup
+function myFunction() {
+    var popup = document.getElementById("myPopup");
+    popup.classList.toggle("show");
+}
+</script>
  </body>
  </html>
