@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang = "es">
+<head>
+  <meta charset="utf-8"/>
+  <meta description="parkApp Login"/>
+  <title>parkApp</title>
+  <link rel="icon" href="img/logo_ico.png">
+  <style>
+    body{
+      background-color: #525252;
+    }
+    .centered-form{
+      margin-top: 30px;
+    }
+    .centered-form .panel{
+     background: rgba(245, 245, 245, 0.8);
+     box-shadow: rgba(0, 0, 0, 0.3) 10px 10px 10px;
+    }
+  </style>
+  <link href="css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery-1.11.1.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row centered-form">
+      <div class="col-md-12 col-md-offset-2">
+        <div class="panel panel-default">
+          <div class="panel-heading" align = "center">
+            <img src="img/logo.png" alt="logo" width="78" height="114"/>
+            <h3 align = "center" class="panel-title">Ingresar</h3>
+          </div>
+          <div class="panel-heading" align = "left">
+            <a href="index.html"><img src="img/left.png" alt="logo" width="45" height="50"/></a>
+          </div>
+
+          <div class="panel-body">
+            <form role="form">
+              <div class="form-group">
+                <input type="text" name="user" id="user" class="form-control input-sm" placeholder="Usuario/email">
+              </div>
+              <div class="form-group">
+                <input type="password" name="password" id="password" class="form-control input-sm" placeholder="Contrase&ntilde;a">
+              </div>
+              <input type="submit" value="Acceder" class="btn btn-info btn-block">
+              <br>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ </body>
+ </html>
