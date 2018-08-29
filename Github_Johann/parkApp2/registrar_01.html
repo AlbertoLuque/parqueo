@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang = "es">
+<head>
+  <meta charset="utf-8"/>
+  <meta description="HTML parkApp"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>parkApp</title>
+  <link rel="icon" href="img/logo_ico.png">
+  <style>
+    body{
+      background-color: #525252;
+    }
+    .centered-form{
+      margin-top: 30px;
+    }
+    .centered-form .panel{
+     background: rgba(245, 245, 245, 0.8);
+     box-shadow: rgba(0, 0, 0, 0.3) 10px 10px 10px;
+    }
+  </style>
+
+<link href="css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery-1.11.1.min.js"></script>
+
+</head>
+<body>
+  <div class="container">
+    <div class="row centered-form">
+     <div class="col-md-12 col-md-offset-2">
+        <div class="panel panel-default">
+          <div class="panel-heading" align = "center">
+            <img src="img/logo.png" alt="logo" width="81" height="100"/>
+            <h3 align = "center" class="panel-title">Perfil de usuario</h3>
+          </div>
+          <div class="panel-heading" align = "left">
+            <a href="mostrar_01.html"><img src="img/left.png" alt="logo" width="45" height="50"/></a>
+          </div>
+
+          <div class="panel-body">
+            <form role="form">
+              <div class="form-group">
+                <input type="text" name="nombres" id="nombres" class="form-control input-sm" placeholder="Nombres">
+              </div>
+
+              <div class="row">
+                <div class="col-md-6 col-md-6 col-md-6">
+                  <div class="form-group">
+                    <input type="text" name="aPaterno" id="aPaterno" class="form-control input-sm" placeholder="Apellido paterno">
+                  </div>
+                </div>
+                <div class="col-md-6 col-md-6 col-md-6">
+                  <div class="form-group">
+                    <input type="text" name="aMaterno" id="aMaterno" class="form-control input-sm" placeholder="Apellido materno">
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <input type="direccion" name="direccion" id="direccion" class="form-control input-sm" placeholder="Direccion">
+              </div>
+
+              <div class="row">
+                <div class="col-md-4 col-md-4 col-md-4">
+                  <div class="form-group">
+                    <input type="text" name="distrito" id="distrito" class="form-control input-sm" placeholder="Distrito">
+                  </div>
+                </div>
+                <div class="col-md-4 col-md-4 col-md-4">
+                  <div class="form-group">
+                    <input type="date" name="fechaN" id="fechaN" class="form-control input-sm" placeholder="Fecha Nac.">
+                  </div>
+                </div>
+                <div class="col-md-4 col-md-4 col-md-4">
+                  <div class="form-group">
+                    <input type="radio" name="gender" value="female" checked> Femenino<br>
+                    <input type="radio" name="gender" value="male"> Masculino<br>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <input type="email" name="email" id="email" class="form-control input-sm" placeholder="Email">
+              </div>
+
+              <div class="row">
+                <div class="col-md-4 col-md-4 col-md-4">
+                  <div class="form-group">
+                    <input type="text" name="tipoDoc" id="tipoDoc" class="form-control input-sm" placeholder="Tipo Doc.">
+                  </div>
+                </div>
+                <div class="col-md-4 col-md-4 col-md-4">
+                  <div class="form-group">
+                    <input type="text" name="docNumber" id="docNumber" class="form-control input-sm" placeholder="Numero Doc.">
+                  </div>
+                </div>
+                <div class="col-md-4 col-md-4 col-md-4">
+                  <div class="form-group">
+                    <input type="tel" name="celular" id="celular" class="form-control input-sm" placeholder="Celular">
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6">
+                    <a href="mostrar_01.html"><input type="button" value="Cancelar" class="btn btn-danger  btn-block"></a>
+                </div>
+                <div class="col-md-6 col-md-6 col-md-6">
+                    <a href="mostrar_01.html"><input type="button" value="Registrar" class="btn btn-info btn-block"></a>
+                    <br>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
