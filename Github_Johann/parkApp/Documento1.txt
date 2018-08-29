@@ -1,3 +1,4 @@
 www.servitron.pe/templates/index.html
 https://getbootstrap.com/docs/4.0/components/pagination/
 
+https://bootsnipp.com/snippets/Al0VV
