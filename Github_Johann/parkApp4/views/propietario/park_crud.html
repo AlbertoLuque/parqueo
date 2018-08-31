@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang = "es">
+<head>
+  <meta charset="utf-8"/>
+  <meta description="HTML parkApp"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>parkApp</title>
+  <link rel="icon" href="../../img/logo_ico.png">
+  <style>
+    body{
+      background-color: #525252;
+    }
+    .centered-form{
+      margin-top: 30px;
+    }
+    .centered-form .panel{
+     background: rgba(245, 245, 245, 0.8);
+     box-shadow: rgba(0, 0, 0, 0.3) 10px 10px 10px;
+    }
+  </style>
+
+<link href="../../css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="../../js/bootstrap.min.js"></script>
+<script src="../../js/jquery-1.11.1.min.js"></script>
+
+</head>
+<body>
+  <div class="container">
+    <div class="row centered-form">
+     <div class="col-md-12 col-md-offset-2">
+          <div class="panel-heading" align = "center">
+            <img src="../../img/logo.png" alt="logo" width="81" height="100"/>
+            <h3 align = "center" class="panel-title">Mantenimiento de Estacionamientos</h3>
+          </div>
+          <div class="panel-heading" align = "left">
+            <a href="../propietario/park_mg.html"><img src="../../img/left.png" alt="logo" width="45" height="50"/></a>
+          </div>
+
+          <div class="panel-body">
+            <form role="form">
+              <div class="form-group">
+                <input type="text" name="nombreLocal" id="nombreLocal" class="form-control input-sm" placeholder="Nombre Local">
+              </div>
+              <div class="form-group">
+                <input type="direccion" name="direccion" id="direccion" class="form-control input-sm" placeholder="Direccion">
+              </div>
+
+              <div class="row">
+                <div class="col-md-6 col-md-6 col-md-6">
+                  <div class="form-group">
+                    <input type="text" name="distrito" id="distrito" class="form-control input-sm" placeholder="Distrito">
+                  </div>
+                </div>
+                <div class="col-md-6 col-md-6 col-md-6">
+                  <div class="form-group">
+                    <input type="number" name="telefono" id="telefono" class="form-control input-sm" placeholder="Telefono">
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6 col-md-6 col-md-6">
+                  <div class="form-group">
+                    <input type="number" name="latitud" id="latitud" class="form-control input-sm" placeholder="Latitud ejm. -12.0573592">
+                  </div>
+                </div>
+                <div class="col-md-6 col-md-6 col-md-6">
+                  <div class="form-group">
+                    <input type="number" name="longitud" id="longitud" class="form-control input-sm" placeholder="Longitud ejm. -77.0388578">
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6 col-md-6 col-md-6">
+                  <div class="form-group">
+                    <a>Horario apertura</a>
+                    <input type="time" name="abre" id="abre" class="form-control input-sm" placeholder="Horario apertura">
+                  </div>
+                </div>
+                <div class="col-md-6 col-md-6 col-md-6">
+                  <div class="form-group">
+                    <a>Horario cierre</a>
+                    <input type="time" name="cierra" id="cierra" class="form-control input-sm" placeholder="Horario cierre">
+                  </div>
+                </div>
+              </div>
+
+
+
+<div class="row">
+<div class="col-md-6 col-md-6 col-md-6">
+<div class="input-group mb-3">
+
+  <div class="custom-file">
+    <input type="file" class="custom-file-input" id="inputGroupFile02">
+    <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Carge una foto</label>
+  </div>
+  <div class="input-group-append">
+    <span class="input-group-text" id="inputGroupFileAddon02">Subir</span>
+  </div>
+
+</div>
+  <iframe height = "320px" width = "450px" src="../../img/derteano001.png">
+    <p>Your browser does not support iframes.</p>
+  </iframe>
+</div>
+
+<div class="col-md-6 col-md-6 col-md-6">
+<div class="input-group mb-3">
+
+  <div class="custom-file">
+    <input type="file" class="custom-file-input" id="inputMap">
+    <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Carge un plano</label>
+  </div>
+  <div class="input-group-append">
+    <span class="input-group-text" id="inputGroupFileAddon02">Upload</span>
+  </div>
+</div>
+  <iframe height = "320px" width = "450px" src="../../img/plano1.png">
+    <p>Your browser does not support iframes.</p>
+  </iframe>
+</div>
+</div>
+<br>
+<br>
+<hr>
+
+
+<!-- Opciones de Tiempo y sus precios  -->
+<div class="row">
+  <div class="col-md-6">
+    <div class="form-group">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+        <label class="form-check-label" for="defaultCheck1">Precio Minuto</label>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="form-group">
+        <input type="number" name="precioMin" id="precioMin" class="form-control input-sm" placeholder="">
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6">
+    <div class="form-group">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+        <label class="form-check-label" for="defaultCheck2">Precio Hora</label>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6 col-md-6 col-md-6">
+    <div class="form-group">
+        <input type="number" name="precioHor" id="precioHor" class="form-control input-sm" placeholder="">
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6">
+    <div class="form-group">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
+        <label class="form-check-label" for="defaultCheck3">Precio Dia</label>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="form-group">
+        <input type="number" name="precioDia" id="precioDia" class="form-control input-sm" placeholder="">
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6">
+    <div class="form-group">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="defaultCheck4">
+        <label class="form-check-label" for="defaultCheck4">Precio Mes</label>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="form-group">
+        <input type="number" name="precioMes" id="precioDia" class="form-control input-sm" placeholder="">
+    </div>
+  </div>
+</div>
+<hr>
+
+
+<!-- Servicios -->
+<div class="row">
+  <div class="col-md-6">
+    <div class="form-group">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="serviciosCheck1">
+        <label class="form-check-label" for="serviciosCheck1">Lavado solo exterior Auto</label>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="form-group">
+        <input type="number" name="precioServ1" id="precioServ1" class="form-control input-sm" placeholder="">
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6">
+    <div class="form-group">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="serviciosCheck2">
+        <label class="form-check-label" for="serviciosCheck2">Lavado solo interior Auto</label>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="form-group">
+        <input type="number" name="precioServ2" id="precioServ2" class="form-control input-sm" placeholder="">
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6">
+    <div class="form-group">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="serviciosCheck3">
+        <label class="form-check-label" for="serviciosCheck3">Encerado somoniz Auto</label>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="form-group">
+        <input type="number" name="precioServ3" id="precioServ3" class="form-control input-sm" placeholder="">
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6">
+    <div class="form-group">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="serviciosCheck4">
+        <label class="form-check-label" for="serviciosCheck4">Silicona llantas Auto</label>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="form-group">
+        <input type="number" name="precioServ4" id="precioServ4" class="form-control input-sm" placeholder="">
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-6">
+    <div class="form-group">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="serviciosCheck5">
+        <label class="form-check-label" for="serviciosCheck5">Lavado, silicona FULL Auto</label>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="form-group">
+        <input type="number" name="precioServ5" id="precioServ5" class="form-control input-sm" placeholder="">
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-6">
+    <div class="form-group">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="serviciosCheck6">
+        <label class="form-check-label" for="serviciosCheck6">Revisión presión llantas</label>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="form-group">
+        <input type="number" name="precioServ5" id="precioServ6" class="form-control input-sm" placeholder="">
+    </div>
+  </div>
+</div>
+<!-- Fin servicios -->
+
+<hr>
+  <br>
+  <a href="#"><input type="button" value="Nuevo Estacionamiento" class="btn btn-info btn-block"></a>
+  <br>
+<hr>
+
+<!-- Relacion de Estacionamientes de este local -->
+  <table class="table">
+    <thead class="thead-light">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Codigo</th>
+        <th scope="col">Tipo Amb.</th>
+        <th scope="col">Tipo Ubi.</th>
+        <th scope="col">Tipo Veh.</th>
+        <th scope="col">Pref.</th>
+        <th scope="col">Activo</th>
+        <th scope="col">Puntuacion</th>
+        <th  with="10%" colspan="2">Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>S303</td>
+        <td>Interior</td>
+        <td>Tercer sótano o más</td>
+        <td>Auto</td>
+        <td>No</td>
+        <td>Si</td>
+        <td>3.5</td>
+        <td><a href="#"><img src="../../img/editar.png"/>Editar</a></td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>103</td>
+        <td>Exterior</td>
+        <td>Primer piso</td>
+        <td>Auto</td>
+        <td>Si</td>
+        <td>Si</td>
+        <td>4.5</td>
+        <td><a href="#"><img src="../../img/editar.png"/>Editar</a></td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>5102</td>
+        <td>Interior</td>
+        <td>Cuarto piso o mas</td>
+        <td>Auto</td>
+        <td>Si</td>
+        <td>Si</td>
+        <td>2.5</td>
+        <td><a href="#"><img src="../../img/editar.png"/>Editar</a></td>
+      </tr>
+      <tr>
+        <th scope="row">4</th>
+        <td>107</td>
+        <td>Aire libre</td>
+        <td>Primer piso</td>
+        <td>Moto</td>
+        <td>Si</td>
+        <td>Si</td>
+        <td>2.5</td>
+        <td><a href="#"><img src="../../img/editar.png"/>Editar</a></td>
+      </tr>
+      <tr>
+        <th scope="row">5</th>
+        <td>115</td>
+        <td>Aire libre<</td>
+        <td>Primer piso</td>
+        <td>Repartidor</td>
+        <td>Si</td>
+        <td>Si</td>
+        <td>2.5</td>
+        <td><a href="#"><img src="../../img/editar.png"/>Editar</a></td>
+      </tr>
+
+
+    </tbody>
+  </table>
+<hr>
+
+<!-- Fin Relacion de Estacionamientes de este local -->
+
+
+
+<br>
+<br>
+              <div class="row">
+                <div class="col-md-4">
+                    <a href="../propietario/park_mg.html"><input type="button" value="Cancelar" class="btn btn-danger  btn-block"></a>
+                </div>
+                <div class="col-md-4 col-md-3 col-md-3">
+                    <a href="../propietario/park_mg.html"><input type="button" value="Registrar" class="btn btn-info btn-block"></a>
+                    <br>
+                </div>
+                <div class="col-md-2 col-md-2 col-md-2">
+                    <a href="../propietario/park_mg.html"><input type="button" value="Actualizar" class="btn btn-info btn-block"></a>
+                    <br>
+                </div>
+
+                <div class="col-md-2 col-md-2 col-md-2">
+                    <a href="../propietario/park_mg.html"><input type="button" value="Eliminar" class="btn btn-info btn-block"></a>
+                    <br>
+                </div>
+                <br>
+                <br>
+                <br>
+
+
+
+
+
+                <br>
+                <br>
+
+
+                <br>
+              </div>
+            </form>
+          </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

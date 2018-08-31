@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang = "es">
+<head>
+  <meta charset="utf-8"/>
+  <meta description="HTML parkApp"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>parkApp</title>
+  <link rel="icon" href="../../img/logo_ico.png">
+  <style>
+    body{
+      background-color: #525252;
+    }
+    .centered-form{
+      margin-top: 30px;
+    }
+    .centered-form .panel{
+     background: rgba(245, 245, 245, 0.8);
+     box-shadow: rgba(0, 0, 0, 0.3) 10px 10px 10px;
+    }
+  </style>
+
+<link href="../../css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="../../js/bootstrap.min.js"></script>
+<script src="../../js/jquery-1.11.1.min.js"></script>
+
+</head>
+<body>
+  <div class="container">
+    <div class="row centered-form">
+     <div class="col-md-12 col-md-offset-2">
+          <div class="panel-heading" align = "center">
+            <img src="../../img/logo.png" alt="logo" width="81" height="100"/>
+            <h3 align = "center" class="panel-title">Mantenimiento de Locales</h3>
+          </div>
+          <div class="panel-heading" align = "left">
+            <a href="../webmaster/local_mg.html"><img src="../../img/left.png" alt="logo" width="45" height="50"/></a>
+          </div>
+
+          <div class="panel-body">
+            <form role="form">
+              <div class="form-group">
+                <input type="text" name="nombreLocal" id="nombreLocal" class="form-control input-sm" placeholder="Nombre Local">
+              </div>
+              <div class="form-group">
+                <input type="direccion" name="direccion" id="direccion" class="form-control input-sm" placeholder="Direccion">
+              </div>
+
+              <div class="row">
+                <div class="col-md-6 col-md-6 col-md-6">
+                  <div class="form-group">
+                    <input type="text" name="distrito" id="distrito" class="form-control input-sm" placeholder="Distrito">
+                  </div>
+                </div>
+                <div class="col-md-6 col-md-6 col-md-6">
+                  <div class="form-group">
+                    <input type="number" name="telefono" id="telefono" class="form-control input-sm" placeholder="Telefono">
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6 col-md-6 col-md-6">
+                  <div class="form-group">
+                    <input type="number" name="latitud" id="latitud" class="form-control input-sm" placeholder="Lattud ejm. -12.0573592">
+                  </div>
+                </div>
+                <div class="col-md-6 col-md-6 col-md-6">
+                  <div class="form-group">
+                    <input type="number" name="longitud" id="longitud" class="form-control input-sm" placeholder="Longitud ejm. -77.0388578">
+                  </div>
+                </div>
+              </div>
+<br>
+<br>
+              <div class="row">
+                <div class="col-md-4">
+                    <a href="../webmaster/local_mg.html"><input type="button" value="Cancelar" class="btn btn-danger  btn-block"></a>
+                </div>
+                <div class="col-md-4 col-md-3 col-md-3">
+                    <a href="../webmaster/local_mg.html"><input type="button" value="Registrar" class="btn btn-info btn-block"></a>
+                    <br>
+                </div>
+                <div class="col-md-2 col-md-2 col-md-2">
+                    <a href="../webmaster/local_mg.html"><input type="button" value="Actualizar" class="btn btn-info btn-block"></a>
+                    <br>
+                </div>
+
+                <div class="col-md-2 col-md-2 col-md-2">
+                    <a href="../webmaster/local_mg.html"><input type="button" value="Eliminar" class="btn btn-info btn-block"></a>
+                    <br>
+                </div>
+<br>
+<br>
+              </div>
+            </form>
+          </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,6 @@
+www.servitron.pe/templates/index.html
+https://getbootstrap.com/docs/4.0/components/pagination/
+
+https://bootsnipp.com/snippets/Al0VV
+http://lineadecodigo.com/html/enlace-a-una-parte-concreta-de-la-pagina/
+https://ascii.cl/es/codigos-html.htm
